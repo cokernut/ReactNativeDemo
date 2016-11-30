@@ -42,3 +42,6 @@ android/app/libs
 
 .vscode/
 typings/
+
+javac-services*log
+javac-services*lck
