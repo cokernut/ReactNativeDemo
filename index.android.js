@@ -1,53 +1,21 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
+  AppRegistry
 } from 'react-native';
 
-export default class ReactNativeDemo extends Component {
+import Base from './source/base/Base';
+
+export default class Root extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
+      <Base />
+    )
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
-
-AppRegistry.registerComponent('ReactNativeDemo', () => ReactNativeDemo);
+/**  
+ * 注册应用(registerComponent)后才能正确渲染
+ * 注意：只把应用作为一个整体注册一次，而不是每个组件/模块都注册
+ * 注意，这里用引号括起来的'HelloWorldApp'必须和你init创建的项目名一致
+ */
+AppRegistry.registerComponent('ReactNativeDemo', () => Root);
