@@ -124,6 +124,9 @@ class Base extends Component {
         <TextInput
           style={{height: 40}}
           placeholder="Type here to translate!"
+          // 如果你还不了解ES6中的新语法，那么简单讲解一下上面那一句
+          // 如果key和value的字面一样，那么可以简写成一个，等同于下面的写法：
+          // this.setState({text: text});
           onChangeText={(text) => this.setState({text})}
         />
         <Text style={{padding: 10, fontSize: 42}}>
